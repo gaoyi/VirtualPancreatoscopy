@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>CoronaryArtery</category>
+  <title>Compute Branch Axis</title>
+  <description><![CDATA[This is a CLI module that compute branchs based on main vessel axis label image and fiduals on branches]]></description>
+  <version>0.0.1</version>
+  <documentation-url>http://www.example.com/Slicer/Modules/ComputeBranchAxis</documentation-url>
+  <license>Slicer</license>
+  <contributor>Yi Gao</contributor>
+  <acknowledgements>This work was partially funded by myself</acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description><![CDATA[Input/output parameters]]></description>
+    <image type="scalar">
+      <name>inputVesselnessVolume</name>
+      <label>Input Vesselness Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description><![CDATA[Input Vesselness volume]]></description>
+    </image>
+    <image type="label">
+      <name>inputAxisLabelVolume</name>
+      <label>Input Axis Label Volume</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description><![CDATA[Input Axis Label volume]]></description>
+    </image>
+    <point multiple="true" coordinateSystem="lps">
+      <name>fiducialsOnBranches</name>
+      <label>Points on branchs</label>
+      <longflag>--ptOnBranches</longflag>
+      <description><![CDATA[A list of fiducial points on branches.]]></description>
+      <default>0,0,0</default>
+    </point>
+    <image type="label" reference="inputVesselnessVolume">
+      <name>outputAxisAndBranchMaskVolume</name>
+      <label>Output Axis and Branch Mask Volume</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output Axis and Branch Mask Volume]]></description>
+    </image>
+  </parameters>
+</executable>

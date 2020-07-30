@@ -1,0 +1,1 @@
+ccmake -DCMAKE_BUILD_TYPE:STRING=Release -DSlicer_USE_SYSTEM_QT:BOOL=0 -DQt5_DIR:PATH=/home/gaoyi/usr/package/Qt/5.11.0/gcc_64/lib/cmake/Qt5 ../Slicer
